@@ -1,0 +1,1 @@
+Please do version the tools. That way you have to be explicit when replacing a binary (sometimes binaries break functionalities - it's better to be explicit about these changes, even for yourself)
