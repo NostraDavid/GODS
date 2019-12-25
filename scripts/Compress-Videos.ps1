@@ -32,7 +32,7 @@ Function Get-Metadata {
 }
 
 Write-Output "This script requires an Nvidia card of the 1000 series or newer because it uses the hevc_nvenc encoder, which is basically Nvidia only."
-Write-Output "If you don't have that, change -c:v from hevc_nvenc (see 'data\CompressMP4 Scripts.txt' for options)"
+Write-Output "If you don't have that, change -c:v from hevc_nvenc (see 'data\Compress-Videos Scripts.txt' for options)"
 Write-Output "Original script from https://github.com/EposVox/WindowsMods, but I hate batch files"
 # Settings constants
 Set-Variable tempThumbnail -option Constant -value "temp_thumbnail_sWOq5gKeIy.jpg"
