@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "shakram02.bash-beautify",
+    "rogalmic.bash-debug",
+    "aaron-bond.better-comments",
+    "justin-grote.better-powershell-syntax-highlighting",
+    "coenraads.bracket-pair-colorizer",
+    "waderyan.gitblame",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "shd101wyy.markdown-preview-enhanced",
+    "pkief.material-icon-theme",
+    "ms-vscode.powershell",
+    "mechatroner.rainbow-csv",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
