@@ -8,3 +8,6 @@
 | scripts/Compress-Videos.ps1    | Use ffmpeg to compress several types of video formats and replaced the old video with a compressed version if the new file is smaller           |
 
 This table is formatted via Shift+Alt+F. I don't do that shit by hand.
+
+PROTIP:  
+If you use [vscode](https://code.visualstudio.com/), right click this folder, click `"Open with Code"`. Vscode will recommend a bunch of extensions :)
