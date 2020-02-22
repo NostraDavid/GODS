@@ -1,0 +1,2 @@
+# Use this on C:\ to remove ALL empty folders from the drive. This may cause the creation of new empty folders, so you may want to re-run this script 2 times.
+Get-ChildItem -Recurse | Where-Object {$_.PsIsContainer -eq $true} | Where-Object {$_.GetFiles().Count -eq 0 -and $_.GetDirectories().Count -eq 0} | Remove-Item
