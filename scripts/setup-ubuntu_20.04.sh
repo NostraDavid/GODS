@@ -36,4 +36,10 @@ tldr &&
         echo "shopt -s cdspell"
         echo "shopt -s dirspell"
     } >>~/.bashrc &&
-    . ~/.bashrc
+    . ~/.bashrc &&
+    mkdir -p ~/.config/powerline &&
+    cp -r /usr/share/powerline/config_files/* ~/.config/powerline &&
+    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' ~/.config/powerline/themes/shell/default_leftonly.json > ~/.config/powerline/themes/shell/temp.json &&
+    rm ~/.config/powerline/themes/shell/default_leftonly.json &&
+    mv ~/.config/powerline/themes/shell/temp.json ~/.config/powerline/themes/shell/default_leftonly.json &&
+    powerline-daemon --replace
