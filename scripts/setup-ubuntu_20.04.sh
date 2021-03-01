@@ -28,5 +28,12 @@ tldr &&
         echo "  POWERLINE_BASH_SELECT=1"
         echo "  . /usr/share/powerline/bindings/bash/powerline.sh"
         echo "fi"
+        echo ""
+        echo "bind 'set completion-ignore-case on'"
+        echo ""
+        # Source: https://www.computerhope.com/unix/bash/shopt.htm#bash-options
+        echo "shopt -s autocd"
+        echo "shopt -s cdspell"
+        echo "shopt -s dirspell"
     } >>~/.bashrc &&
     . ~/.bashrc
