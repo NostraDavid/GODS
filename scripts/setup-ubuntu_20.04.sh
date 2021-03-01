@@ -3,6 +3,8 @@
 # don't forget to download, install and use (set font in the terminal) the powerline fonts:
 # https://github.com/powerline/fonts
 
+# ! The mlocate database thingy may take QUITE a while!
+
 sudo apt update &&
     sudo apt upgrade -y &&
     sudo apt remove -y vim && # I prefer Neovim :)
