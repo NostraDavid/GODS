@@ -2,8 +2,18 @@
 
 sudo apt update &&
     sudo apt upgrade -y &&
-    sudo apt remove -y vim &&
-    sudo apt install -y tldr neovim mlocate python3-pip powerline screenfetch neofetch &&
+    sudo apt remove -y vim && # I prefer Neovim :)
+    sudo apt install -y \
+jq \
+mlocate \
+neofetch \
+neovim \
+powerline \
+python3 \
+python3-pip \
+python3-venv \
+screenfetch \
+tldr &&
     sudo apt autoremove -y &&
     tldr tldr && # pre-download tldr stuff, not necessary but nice.
     pip3 install powerline-status &&
