@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+# don't forget to download, install and use (set font in the terminal) the powerline fonts:
+# https://github.com/powerline/fonts
+
 sudo apt update &&
     sudo apt upgrade -y &&
     sudo apt remove -y vim && # I prefer Neovim :)
