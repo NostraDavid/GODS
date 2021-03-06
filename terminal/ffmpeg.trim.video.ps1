@@ -1,3 +1,5 @@
+# https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video
+
 # -to time_stop
 # Time in HH:mm:ss
 # -i input
