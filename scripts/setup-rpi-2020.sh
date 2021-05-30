@@ -37,7 +37,9 @@ sudo apt-get update &&
         python3-setuptools \
         python3-venv \
         sysbench \
-        tldr
+        tldr \
+        htop \
+        ncdu
 
 # pypy 32 bit isn't available for RPI ;_;
 
