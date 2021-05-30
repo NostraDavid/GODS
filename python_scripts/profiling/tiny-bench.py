@@ -1,5 +1,7 @@
 import time
 
+print("This can take some 44 seconds...")
+
 start_time = time.time()
 
 total = 0

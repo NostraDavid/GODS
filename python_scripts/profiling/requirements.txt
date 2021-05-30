@@ -1,3 +1,4 @@
 heartrate==0.2.1
 loguru==0.5.3
 snoop==0.3.0
+black==21.5b1
