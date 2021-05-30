@@ -1,3 +1,5 @@
 {
-    "terminal.integrated.fontFamily": "\"DejaVu Sans Mono for Powerline\""
+    "python.formatting.provider": "black",
+    "python.pythonPath": "python-profiling/venv/bin/python",
+    "terminal.integrated.fontFamily": "\"DejaVu Sans Mono for Powerline\"",
 }
