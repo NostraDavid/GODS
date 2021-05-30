@@ -9,17 +9,17 @@ sudo apt update &&
     sudo apt upgrade -y &&
     sudo apt remove -y vim && # I prefer Neovim :)
     sudo apt install -y \
-jq \
-mlocate \
-neofetch \
-neovim \
-powerline \
-python3.8 \
-python3.8-pip \
-python3.8-setuptools \
-python3.8-venv \
-screenfetch \
-tldr &&
+        jq \
+        mlocate \
+        neofetch \
+        neovim \
+        powerline \
+        python3.8 \
+        python3.8-pip \
+        python3.8-setuptools \
+        python3.8-venv \
+        screenfetch \
+        tldr &&
     sudo apt autoremove -y &&
     tldr tldr && # pre-download tldr stuff, not necessary but nice.
     pip3 install powerline-status &&
@@ -45,7 +45,7 @@ tldr &&
     . ~/.bashrc &&
     mkdir -p ~/.config/powerline &&
     cp -r /usr/share/powerline/config_files/* ~/.config/powerline &&
-    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' ~/.config/powerline/themes/shell/default_leftonly.json > ~/.config/powerline/themes/shell/temp.json &&
+    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' ~/.config/powerline/themes/shell/default_leftonly.json >~/.config/powerline/themes/shell/temp.json &&
     rm ~/.config/powerline/themes/shell/default_leftonly.json &&
     mv ~/.config/powerline/themes/shell/temp.json ~/.config/powerline/themes/shell/default_leftonly.json &&
     powerline-daemon --replace
