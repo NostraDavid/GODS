@@ -39,7 +39,8 @@ sudo apt-get update &&
         sysbench \
         tldr \
         htop \
-        ncdu
+        ncdu \
+        sqlite
 
 # pypy 32 bit isn't available for RPI ;_;
 
