@@ -48,3 +48,8 @@ sudo apt update &&
     rm "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
     mv "$HOME/.config/powerline/themes/shell/temp.json" "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
     powerline-daemon --replace
+
+# and since using `python -m venv venv` will be broken as fuck:
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+sudo dpkg-reconfigure locales
