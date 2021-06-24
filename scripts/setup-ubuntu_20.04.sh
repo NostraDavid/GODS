@@ -10,14 +10,13 @@ sudo apt update &&
     sudo apt remove -y vim && # I prefer Neovim :)
     sudo apt install -y \
         jq \
-        mlocate \
         neofetch \
         neovim \
         powerline \
-        python3.8 \
-        python3.8-pip \
-        python3.8-setuptools \
-        python3.8-venv \
+        python3 \
+        python3-pip \
+        python3-setuptools \
+        python3-venv \
         screenfetch \
         tldr &&
     sudo apt autoremove -y &&
@@ -41,11 +40,11 @@ sudo apt update &&
         echo "shopt -s autocd"
         echo "shopt -s cdspell"
         echo "shopt -s dirspell"
-    } >>~/.bashrc &&
-    . ~/.bashrc &&
-    mkdir -p ~/.config/powerline &&
-    cp -r /usr/share/powerline/config_files/* ~/.config/powerline &&
-    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' ~/.config/powerline/themes/shell/default_leftonly.json >~/.config/powerline/themes/shell/temp.json &&
-    rm ~/.config/powerline/themes/shell/default_leftonly.json &&
-    mv ~/.config/powerline/themes/shell/temp.json ~/.config/powerline/themes/shell/default_leftonly.json &&
+    } >>"$HOME/.bashrc" &&
+    source "$HOME/.bashrc" &&
+    mkdir -p "$HOME/.config/powerline" &&
+    cp -r /usr/share/powerline/config_files/* "$HOME/.config/powerline" &&
+    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' "$HOME/.config/powerline/themes/shell/default_leftonly.json >"$HOME/.config/powerline/themes/shell/temp.json &&
+    rm "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
+    mv "$HOME/.config/powerline/themes/shell/temp.json" "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
     powerline-daemon --replace
