@@ -11,5 +11,8 @@
             "script": "${file}",
             "cwd": "${file}"
         }
-    ]
+    ],
+    "autoReload": {
+        "enable": true
+    }
 }

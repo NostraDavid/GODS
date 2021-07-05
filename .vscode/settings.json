@@ -1,5 +1,7 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "/usr/bin/python",
-    "terminal.integrated.fontFamily": "\"DejaVu Sans Mono for Powerline\"",
+    "python.languageServer": "Pylance",
+    "python.poetryPath": "C:\\Users\\NostraDavid\\AppData\\Roaming\\Python\\Python39\\Scripts\\poetry.exe",
+    "python.pythonPath": "c:\\Users\\NostraDavid\\Documents\\GitHub\\GODS\\prototypes\\crypto_trading_bot\\venv\\Scripts\\python.exe",
+    "pythonautovenv.poetryPath": "C:\\Users\\NostraDavid\\AppData\\Roaming\\Python\\Python39\\Scripts\\poetry.exe",
 }
