@@ -3,24 +3,19 @@
 # don't forget to download, install and use (set font in the terminal) the powerline fonts:
 # https://github.com/powerline/fonts
 
-# ! The mlocate database thingy may take QUITE a while!
-
 sudo apt update &&
     sudo apt upgrade -y &&
     sudo apt remove -y vim && # I prefer Neovim :)
     sudo apt install -y \
         jq \
-        neofetch \
         neovim \
+        ncdu \
         powerline \
         python3 \
         python3-pip \
-        python3-setuptools \
-        python3-venv \
-        screenfetch \
         tldr &&
     sudo apt autoremove -y &&
-    tldr tldr && # pre-download tldr stuff, not necessary but nice.
+    tldr tldr && # pre-download tldr stuff, not necessary but nice to have that done already.
     pip3 install powerline-status &&
     {
         echo ""
@@ -44,7 +39,7 @@ sudo apt update &&
     source "$HOME/.bashrc" &&
     mkdir -p "$HOME/.config/powerline" &&
     cp -r /usr/share/powerline/config_files/* "$HOME/.config/powerline" &&
-    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' "$HOME/.config/powerline/themes/shell/default_leftonly.json >"$HOME/.config/powerline/themes/shell/temp.json &&
+    jq 'del(.segments.left[] | select(.function == "powerline.segments.common.env.user")) | {segments:{left:[(.segments.left[] | select(.function == "powerline.segments.shell.cwd") += {"args":{"dir_shorten_len": 2}})]}}' "$HOME/.config/powerline/themes/shell/default_leftonly.json" > "$HOME/.config/powerline/themes/shell/temp.json" &&
     rm "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
     mv "$HOME/.config/powerline/themes/shell/temp.json" "$HOME/.config/powerline/themes/shell/default_leftonly.json" &&
     powerline-daemon --replace
